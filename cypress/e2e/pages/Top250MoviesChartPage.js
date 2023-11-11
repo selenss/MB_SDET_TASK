@@ -1,4 +1,5 @@
 import {IMDB_RATING_VALUE, IMDB_RATING_TEXT} from "../../params/constants"
+const generateData = require('../../support/data_generators')
 const pageElements = {
   RatedMovies: () => cy.get('button.ipc-rate-button--rated'),
   UnratedMovies: () => cy.get('button.ipc-rate-button--unrated'),
@@ -20,14 +21,14 @@ export default {
       .its('length')
       .then((len) => {
         pageElements.UnratedMovies()
-          .eq(Math.floor(Math.random() * ((len - 1) - 0 + 1)) + 0).click();
+          .eq(generateData.getRandomArrayIndex(len)).click();
       });
 
     pageElements.RateStars()
       .its('length')
       .then((len) => {
         pageElements.RateStars()
-          .eq(Math.floor(Math.random() * ((len - 1) - 0 + 1)) + 0).click({ force: true });
+          .eq(generateData.getRandomArrayIndex(len)).click({ force: true });
       });
 
     pageElements.RateButton().click();
@@ -38,7 +39,7 @@ export default {
       .its('length')
       .then((len) => {
         pageElements.RatedMovies()
-          .eq(Math.floor(Math.random() * ((len - 1) - 0 + 1)) + 0).click();
+          .eq(generateData.getRandomArrayIndex(len)).click();
       });
 
     pageElements.RemoveRatingButton().click();
@@ -74,7 +75,7 @@ export default {
       .its('length')
       .then((len) => {
         pageElements.MovieTitles()
-          .eq(Math.floor(Math.random() * ((len - 1) - 0 + 1)) + 0)
+          .eq(generateData.getRandomArrayIndex(len))
           .invoke('text')
           .then((value) => {
             let txt = value.split('. ');

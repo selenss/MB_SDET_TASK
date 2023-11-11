@@ -4,7 +4,8 @@ const pageElements = {
     FilterMenuButton: () => cy.get('button[data-testid="filter-menu-button"]'),
     GenreButtons: () => cy.get('div[data-testid="filter-genre"] button.ipc-chip'),
     FilterMenuCloseButton: () => cy.get('button[title="Close Prompt"]'),
-    SelectedFilterItem: () => ''
+    SelectedFilterItem: () => '',
+    Loader: () => cy.get('div[data-testid="chart-layout-sort-change-loader"]')
   };
   
   export default {
@@ -36,5 +37,6 @@ const pageElements = {
       pageElements.SelectedFilterItem = cy.get(`button[data-testid="filter-chip-genre-${str}"]`);
       pageElements.SelectedFilterItem.should('exist');
       pageElements.SelectedFilterItem.should('be.visible');
+      pageElements.Loader().should('not.exist');
     }
   };

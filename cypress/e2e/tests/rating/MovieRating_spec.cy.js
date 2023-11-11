@@ -1,16 +1,8 @@
-import { VALID_EMAIL, VALID_PASSWORD } from "../../../params/config"
-import { TOP_250_MOVIES_CHART_URL } from "../../../params/constants"
-import LoginPage from "../../pages/LoginPage"
-import NavigationPage from "../../pages/NavigationPage"
 import Top250MoviesChartPage from "../../pages/Top250MoviesChartPage"
 
 describe(`Movie Rating Actions`, () => {
     beforeEach(() => { 
-        NavigationPage.goToBaseUrl();
-        LoginPage.goToSignInPage();
-        LoginPage.selectImdbLoginOption();
-        LoginPage.loginWithEmail(VALID_EMAIL, VALID_PASSWORD);
-        NavigationPage.goToGivenUrl(TOP_250_MOVIES_CHART_URL);
+        cy.beforeHook();
     });
 
     it('should rate a movie', () => {
