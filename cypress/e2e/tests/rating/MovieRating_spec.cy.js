@@ -5,7 +5,7 @@ import NavigationPage from "../../pages/NavigationPage"
 import Top250MoviesChartPage from "../../pages/Top250MoviesChartPage"
 
 describe(`Movie Rating Actions`, () => {
-    beforeEach(() => {
+    beforeEach(() => { 
         NavigationPage.goToBaseUrl();
         LoginPage.goToSignInPage();
         LoginPage.selectImdbLoginOption();

@@ -24,7 +24,7 @@ module.exports = defineConfig({
     },
     baseUrl: 'https://www.imdb.com',
     specPattern : [
-      'cypress/e2e/tests/**/*_spec.cy.js'
+      'cypress/e2e/tests/**/**_spec.cy.js'
     ]
   },
 

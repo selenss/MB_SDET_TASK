@@ -82,8 +82,8 @@ module.exports = {
     return shuffled.slice(0, num);
   },
 
-  getRandomArrayIndex: function(list) {
-    return Math.floor(Math.random() * list.length);
+  getRandomArrayIndex: function(len) {
+    return Math.floor(Math.random() * ((len - 1) - 0 + 1)) + 0;
     
   }
 };
