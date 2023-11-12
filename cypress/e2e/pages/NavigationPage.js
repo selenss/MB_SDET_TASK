@@ -1,9 +1,9 @@
 export default {
-    goToBaseUrl() {
-      cy.visit('')
-    },
+  goToBaseUrl() {
+    cy.visit('');
+  },
 
-    goToGivenUrl(url) {
-        cy.visit(url);
-    }
-  };
+  goToGivenUrl(url) {
+    cy.visit(url);
+  },
+};
