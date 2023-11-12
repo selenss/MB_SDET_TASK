@@ -5,3 +5,13 @@ services:
     command: "test:firefox"
     volumes:
       - ./cypress/reports/firefox:/e2e-docker/cypress/reports
+  e2e-chrome:
+    image: "imdb-test-v1"
+    command: "test:chrome"
+    volumes:
+      - ./cypress/reports/chrome:/e2e-docker/cypress/reports
+  e2e-electron:
+    image: "imdb-test-v1"
+    command: "test:electron"
+    volumes:
+      - ./cypress/reports/electron:/e2e-docker/cypress/reports

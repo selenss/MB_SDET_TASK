@@ -7,7 +7,7 @@
     "test:chrome": "cypress run --browser chrome --headed",
     "test:electron": "cypress run --browser electron --headed",
     "test:firefox": "cypress run --browser firefox --headed",
-    "test:report": "open cypress/reports/html/index.html"
+    "test:report:chrome:win": "start cypress/reports/html/index.html"
   },
   "repository": {
     "type": "git",
