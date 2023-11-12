@@ -5,7 +5,7 @@ describe(`Movie Rating Actions`, () => {
     cy.beforeHook();
   });
 
-  it("should rate a movie", () => {
+  it.only("should rate a movie", () => {
     Top250MoviesChartPage.getRateAmount().then((beforeRate) => {
       Top250MoviesChartPage.rateAMovie();
       Top250MoviesChartPage.getRateAmount().then((afterRate) => {

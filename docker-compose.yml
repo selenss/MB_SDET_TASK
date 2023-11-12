@@ -1,11 +1,7 @@
-version: "3.2"
-
+version: "3"
 services:
-  cypress:
-    image: cypress/included:latest
-    entrypoint: ["sh", "-c", "yarn install && yarn test:chrome && yarn test:electron && yarn test:firefox && yarn test:report"]
-    environment:
-      - CYPRESS_baseUrl=https://www.imdb.com
-    working_dir: /e2e
+  e2e-firefox:
+    image: "imdb-test-v1"
+    command: "test:firefox"
     volumes:
-      - ./:/e2e
+      - ./cypress/reports/firefox:/e2e-docker/cypress/reports
