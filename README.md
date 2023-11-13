@@ -83,19 +83,19 @@ To run tests in Electron, run the following command
 
 Create the docker image, run the following command
 ```bash
-   "docker build -t imdb-test-v1 ."
+   docker build -t imdb-test-v1 .
 ```
 Create the Chrome container and execute the tests in Chrome Browser, run the following command
 ```bash
-  "docker-compose run e2e-chrome"
+  docker-compose run e2e-chrome
 ```
 Create the Firefox container and execute the tests in Firefox Browser, run the following command
 ```bash
-  "docker-compose run e2e-firefox"
+  docker-compose run e2e-firefox
 ```
 Create the Electron container and execute the tests in Electron Browser, run the following command
 ```bash
-  "docker-compose run e2e-electron"
+  docker-compose run e2e-electron
 ```
 
 ## Test Report
