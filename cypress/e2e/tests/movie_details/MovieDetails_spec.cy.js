@@ -1,10 +1,16 @@
 import Top250MoviesChartPage from "../../pages/Top250MoviesChartPage";
 import FiltersPage from "../../pages/FiltersPage";
 import MovieDetailsPage from "../../pages/MovieDetailsPage";
+import NavigationPage from "../../pages/NavigationPage";
+import { TOP_250_MOVIES_CHART_URL } from "../../../params/constants";
 
 describe(`Movie Details Checks`, () => {
-  beforeEach(() => {
+  before(() => {
     cy.beforeHook();
+  });
+
+  beforeEach(() => {
+    NavigationPage.goToGivenUrl(TOP_250_MOVIES_CHART_URL);
   });
 
   it("should check genre detail of the movie from tooltip", () => {

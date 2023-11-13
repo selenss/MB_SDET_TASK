@@ -27,7 +27,6 @@ import { addMatchImageSnapshotCommand } from "@simonsmith/cypress-image-snapshot
 addMatchImageSnapshotCommand();
 
 import { VALID_EMAIL, VALID_PASSWORD } from "../params/config";
-import { TOP_250_MOVIES_CHART_URL } from "../params/constants";
 import LoginPage from "../e2e/pages/LoginPage";
 import NavigationPage from "../e2e/pages/NavigationPage";
 
@@ -39,5 +38,4 @@ Cypress.Commands.add("beforeHook", () => {
   LoginPage.goToSignInPage();
   LoginPage.selectImdbLoginOption();
   LoginPage.loginWithEmail(VALID_EMAIL, VALID_PASSWORD);
-  NavigationPage.goToGivenUrl(TOP_250_MOVIES_CHART_URL);
 });

@@ -1,8 +1,14 @@
 import Top250MoviesChartPage from "../../pages/Top250MoviesChartPage";
+import NavigationPage from "../../pages/NavigationPage";
+import { TOP_250_MOVIES_CHART_URL } from "../../../params/constants";
 
 describe(`Movie Sorting Actions`, () => {
-  beforeEach(() => {
+  before(() => {
     cy.beforeHook();
+  });
+
+  beforeEach(() => {
+    NavigationPage.goToGivenUrl(TOP_250_MOVIES_CHART_URL);
   });
 
   it('should sort movies by "IMDb Rating" in ASC mode', () => {

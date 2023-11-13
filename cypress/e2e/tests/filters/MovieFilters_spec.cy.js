@@ -1,12 +1,17 @@
 import FiltersPage from "../../pages/FiltersPage";
 import Top250MoviesChartPage from "../../pages/Top250MoviesChartPage";
 import MovieDetailsPage from "../../pages/MovieDetailsPage"
-import { DRAMA_GENRE, THRILLER_GENRE } from "../../../params/constants";
+import NavigationPage from "../../pages/NavigationPage";
+import { DRAMA_GENRE, THRILLER_GENRE, TOP_250_MOVIES_CHART_URL } from "../../../params/constants";
 import defects from '../../../support/defects';
 
 describe(`Filter Actions`, () => {
-  beforeEach(() => {
+  before(() =>{
     cy.beforeHook();
+  });
+
+  beforeEach(() => {
+    NavigationPage.goToGivenUrl(TOP_250_MOVIES_CHART_URL);
     FiltersPage.goToFilterMenu();
   });
 
