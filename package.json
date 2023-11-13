@@ -8,11 +8,11 @@
     "test:electron": "cypress run --browser electron --headed",
     "test:firefox": "cypress run --browser firefox --headed",
     "test:report:chrome:win": "start cypress/reports/chrome/index.html",
-    "test:report:chrome:linux": "open cypress/reports/chrome/index.html",
+    "test:report:chrome": "open cypress/reports/chrome/index.html",
     "test:report:firefox:win": "start cypress/reports/firefox/index.html",
-    "test:report:firefox:linux": "open cypress/reports/firefox/index.html",
+    "test:report:firefox": "open cypress/reports/firefox/index.html",
     "test:report:electron:win": "start cypress/reports/electron/index.html",
-    "test:report:electron:linux": "open cypress/reports/electron/index.html"
+    "test:report:electron": "open cypress/reports/electron/index.html"
   },
   "repository": {
     "type": "git",
