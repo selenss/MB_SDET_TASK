@@ -97,6 +97,7 @@ Create the Electron container and execute the tests in Electron Browser, run the
 ```bash
   docker-compose run e2e-electron
 ```
+###IMPORTANT NOTE:### IMDb may show captcha if it detects high volume authentication requests. This blocks the current test execution. In this case, please exit the ongoing execution and re-execute the above command/s.
 
 ## Test Report
 
