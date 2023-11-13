@@ -20,6 +20,10 @@ This project is a UI test framework for IMDb Top 250 Movies Chart functionalitie
 ```bash
   docker -v
 ```
+7. Install Chrome Browser https://www.google.com/chrome in your system
+8. Install Firefox Browser https://www.mozilla.org/en-US/firefox/new/ in your system
+
+### IMPORTANT NOTE: If your MAC is with Apple M1 Pro chip, please follow the instructions in section "Running Tests Locally" to execute the test cases. Unfortunately, cypress/included Docker Image does not support Apple M1 Pro chip. (i.e. https://bugs.chromium.org/p/chromium/issues/detail?id=677140#c19) ###
 
 ## Installation
 
@@ -56,52 +60,51 @@ In config.js file, add your autentication details (VALID_EMAIL, VALID_PASSWORD) 
 To run tests in Chrome, run the following command
 
 ```bash
-  npm "run test:chrome"
+  npm run test:chrome
 ```
 
 To run tests in Firefox, run the following command
 
 ```bash
-  npm "run test:firefox"
+  npm run test:firefox
 ```
 
 To run tests in Electron, run the following command
 
 ```bash
-  npm "run test:electron"
+  npm run test:electron
 ```
 
 ## Running Tests With Docker
 
 Create the docker image, run the following command
 ```bash
-  npm "docker build -t imdb-test-v1 ."
+   "docker build -t imdb-test-v1 ."
 ```
 Create the Chrome container and execute the tests in Chrome Browser, run the following command
 ```bash
-  npm "docker-compose run e2e-chrome"
+  "docker-compose run e2e-chrome"
 ```
-Create the Firefox container and execute the tests in Chrome Browser, run the following command
+Create the Firefox container and execute the tests in Firefox Browser, run the following command
 ```bash
-  npm "docker-compose run e2e-firefox"
+  "docker-compose run e2e-firefox"
 ```
-Create the Electron container and execute the tests in Chrome Browser, run the following command
+Create the Electron container and execute the tests in Electron Browser, run the following command
 ```bash
-  npm "docker-compose run e2e-electron"
+  "docker-compose run e2e-electron"
 ```
-
 
 ## Test Report
 
 To display test report with OS: Windows, run the following command
 
 ```bash
-  npm "run test:report:win"
+  npm run test:report:win
 ```
 To display test report with OS: Linux/MacOS, run the following command
 
 ```bash
-  npm "test:report"
+  npm test:report
 ```
 If test case is passed
 * ![Alt text](images/passed_test.png)
@@ -112,7 +115,7 @@ If test case is failed
 If test case is skipped, title contains defect/bug ticket
 * ![Alt text](images/skipped_case.png)
 
-## Selected Tools
+## Selected Tools & Language
 Cypress tool for automated tests is prefered due to its capabilities listed below;
 * Inbuilt multiple browser support automatically detects installed browsers in your system
 * Inbuilt Mocha support for grouping suites and tests
@@ -131,7 +134,7 @@ Javascript language is preferred;
 * Non-complex and light-weighted project structure
 
 ## Project Structure
-* Request groups : cypress/e2e/methods (If a new request group file is created, its path should be added to cypress/support/e2e.js so that it can be used anywhere in the framework)
+* Page element and action groups : cypress/e2e/methods
 * Test groups : cypress/e2e/tests
 * Fixture test data : cypress/fixtures
 * Test execution configuration : cypress/params/config.js
