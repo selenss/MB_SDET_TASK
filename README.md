@@ -36,7 +36,7 @@ Go to your project directory
 Clone the project
 
 ```bash
-  git clone https://github.com/selenss/MB_QA_TASK.git
+  git clone https://github.com/selenss/MB_SDET_TASK.git
 ```
 
 Install dependencies
