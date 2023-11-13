@@ -34,7 +34,7 @@ This project is a UI test framework for IMDb Top 250 Movies Chart functionalitie
 Go to your project directory
 
 ```bash
-  cd your-project-folder
+  cd <your-project-folder>
 ```
 
 Clone the project
@@ -54,7 +54,7 @@ Install dependencies
 In order to execute test cases, user credentials should be provided. 
 
 ```bash
-  cd your-project-folder/cypress/params
+  cd <your-project-folder/cypress/params>
 ```
 In config.js file, add your autentication details (VALID_EMAIL, VALID_PASSWORD) for https://www.imdb.com/ 
 
