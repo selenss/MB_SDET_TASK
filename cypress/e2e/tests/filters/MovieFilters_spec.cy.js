@@ -2,6 +2,7 @@ import FiltersPage from "../../pages/FiltersPage";
 import Top250MoviesChartPage from "../../pages/Top250MoviesChartPage";
 import MovieDetailsPage from "../../pages/MovieDetailsPage"
 import { DRAMA_GENRE, THRILLER_GENRE } from "../../../params/constants";
+import defects from '../../../support/defects';
 
 describe(`Filter Actions`, () => {
   beforeEach(() => {
@@ -9,7 +10,8 @@ describe(`Filter Actions`, () => {
     FiltersPage.goToFilterMenu();
   });
 
-  it.skip("should apply GENRE filter with random selection", () => {
+  it("should apply GENRE filter with random selection", () => {
+    defects.addTicket('SQM-1');
     FiltersPage.selectRandomGenre().then((selectedGenre) => {
       FiltersPage.closeFilterMenu();
       FiltersPage.checkSelectedFilterVisibility(selectedGenre);

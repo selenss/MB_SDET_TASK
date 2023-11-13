@@ -7,12 +7,8 @@
     "test:chrome": "cypress run --browser chrome --headed",
     "test:electron": "cypress run --browser electron --headed",
     "test:firefox": "cypress run --browser firefox --headed",
-    "test:report:chrome:win": "start cypress/reports/chrome/index.html",
-    "test:report:chrome": "open cypress/reports/chrome/index.html",
-    "test:report:firefox:win": "start cypress/reports/firefox/index.html",
-    "test:report:firefox": "open cypress/reports/firefox/index.html",
-    "test:report:electron:win": "start cypress/reports/electron/index.html",
-    "test:report:electron": "open cypress/reports/electron/index.html"
+    "test:report:win": "start cypress/reports/html/index.html",
+    "test:report": "open cypress/reports/html/index.html"
   },
   "repository": {
     "type": "git",
