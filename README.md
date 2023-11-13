@@ -20,8 +20,8 @@ This project is a UI test framework for IMDb Top 250 Movies Chart functionalitie
 ```bash
   docker -v
 ```
-7. Install Chrome Browser https://www.google.com/chrome in your system
-8. Install Firefox Browser https://www.mozilla.org/en-US/firefox/new/ in your system
+7. Install Chrome Browser https://www.google.com/chrome 
+8. Install Firefox Browser https://www.mozilla.org/en-US/firefox/new/ 
 
 ###IMPORTANT NOTE:### If your MAC is with Apple M1 Pro chip, please follow the instructions in section "Running Tests Locally" to execute the test cases. Unfortunately, cypress/included Docker Image does not support Apple M1 Pro chip. (i.e. https://bugs.chromium.org/p/chromium/issues/detail?id=677140#c19). You can check hardware overview by below command in your terminal.
 
