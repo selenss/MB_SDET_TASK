@@ -3,9 +3,10 @@ const generateData = require("../../support/data_generators");
 const pageElements = {
   FilterMenuButton: () => cy.get('button[data-testid="filter-menu-button"]'),
   GenreButtons: () => cy.get('div[data-testid="filter-genre"] button.ipc-chip'),
-  FilterMenuCloseButton: () => cy.get('button[title="Close Prompt"]'),
+  FilterMenuCloseButton: () => cy.get('button[aria-label="Close Prompt"]'),
   SelectedFilterItem: () => '',
   Loader: () => cy.get('div[data-testid="chart-layout-sort-change-loader"]'),
+  SpecificGenreButton: () => ''
 };
 
 export default {
@@ -30,9 +31,21 @@ export default {
       });
   },
 
+  selectAGenre(genre) {
+    pageElements.SpecificGenreButton = cy.get(`button[data-testid="filter-genre-chip-${genre}"]`);
+    return pageElements
+          .SpecificGenreButton
+          .click()
+          .invoke("text")
+          .then((value) => {
+            let txt = value.split(" (");
+            return txt[0];
+          });
+  },
+
   closeFilterMenu() {
+    pageElements.FilterMenuCloseButton().should("be.enabled");
     pageElements.FilterMenuCloseButton().click();
-    pageElements.FilterMenuCloseButton().should("not.be.visible");
   },
 
   checkSelectedFilterVisibility(selectedFilterTxt) {

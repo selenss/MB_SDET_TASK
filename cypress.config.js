@@ -27,6 +27,6 @@ module.exports = defineConfig({
       require("cypress-mochawesome-reporter/plugin")(on);
     },
     baseUrl: "https://www.imdb.com",
-    specPattern: ["cypress/e2e/tests/**/*Rating*_spec.cy.js"],
+    specPattern: ["cypress/e2e/tests/**/**_spec.cy.js"],
   },
 });

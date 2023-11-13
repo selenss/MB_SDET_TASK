@@ -10,3 +10,7 @@ export const MOVIE_TOOL_TIP_MSG = "See more information about";
 //SORT OPTIONS
 export const IMDB_RATING_VALUE = "USER_RATING";
 export const IMDB_RATING_TEXT = "IMDb rating";
+
+//GENRES
+export const DRAMA_GENRE = "Drama"
+export const THRILLER_GENRE = "Thriller"

@@ -55,6 +55,7 @@ export default {
   },
 
   getRateAmount() {
+    pageElements.RatedAmountText().should('be.visible');
     return pageElements.RatedAmountText().then(($elem) => {
       return $elem.text(); 
     });

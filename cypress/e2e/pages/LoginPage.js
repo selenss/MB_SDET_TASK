@@ -26,6 +26,7 @@ export default {
     pageElements.EmailInput().type(email);
     pageElements.PasswordInput().clear();
     pageElements.PasswordInput().type(password);
+    pageElements.SigninButton().should("be.visible");
     pageElements.SigninButton().click();
     pageElements.SignInButton().should("not.exist");
     pageElements.UserIcon().should("exist");
