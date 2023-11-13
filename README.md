@@ -1,6 +1,6 @@
 # Malwarebytes SDET Task
 
-This project is a UI test framework for IMDb Top 250 Movies Chart functionalities in https://www.imdb.com/chart/top/?ref_=nv_mv_250_6. It is conducted as page object model in order to provide independency between test data and endpoints, to obtain cost effective maintanence and to adapt new test cases easily (central) of new features and functionalities.
+This project is a UI test framework for IMDb Top 250 Movies Chart functionalities in https://www.imdb.com/chart/top/?ref_=nv_mv_250_6. It is conducted as page object model in order to provide independency between tests, to obtain cost effective maintanence and to adapt new test cases easily (central) of new features and functionalities.
 
 ## Prerequisites
 
